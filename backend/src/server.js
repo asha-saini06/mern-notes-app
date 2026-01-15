@@ -1,6 +1,6 @@
 import express from 'express'; 
 // const express = require('express'); // Changed to CommonJS syntax
-import notesRoutes from './src/routes/notesRoutes.js';
+import notesRoutes from './routes/notesRoutes.js';
 
 const app = express();
 
