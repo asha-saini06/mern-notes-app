@@ -3,8 +3,6 @@
 This is the **backend service** for the MERN Notes Application.
 It provides a RESTful API for managing notes, built with **Node.js, Express, and MongoDB**.
 
----
-
 ## 🚀 Tech Stack
 
 * **Node.js** – JavaScript runtime
@@ -15,11 +13,9 @@ It provides a RESTful API for managing notes, built with **Node.js, Express, and
 * **cors** – Cross-origin resource sharing
 * **nodemon** – Development auto-reload
 
----
-
 ## 📁 Project Structure
 
-```
+```pgsql
 backend/
 ├── src/
 │   └── server.js        # Express server entry point
@@ -28,8 +24,6 @@ backend/
 ├── .env                 # Environment variables (ignored by git)
 └── README.md
 ```
-
----
 
 ## ⚙️ Installation & Setup
 
@@ -57,8 +51,6 @@ UPSTASH_REDIS_REST_URL=your_upstash_redis_url
 UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
 ```
 
----
-
 ## ▶️ Running the Server
 
 ### Development mode (with hot reload)
@@ -75,17 +67,15 @@ npm start
 
 Server will start on:
 
-```
+```bash
 http://localhost:5001
 ```
-
----
 
 ## 📡 API Endpoints (Initial)
 
 ### Health / Test Route
 
-```
+```bash
 GET /api/notes
 ```
 
@@ -96,8 +86,6 @@ Notes is working
 ```
 
 > More CRUD endpoints will be added as the project progresses.
-
----
 
 ## 🧠 Module System
 
@@ -113,15 +101,11 @@ Example:
 import express from 'express';
 ```
 
----
-
 ## 🔐 Security & Best Practices
 
 * Sensitive data stored in `.env`
 * `.env` and `node_modules` are ignored via `.gitignore`
 * Rate limiting implemented using Upstash Redis
-
----
 
 ## 📌 Future Enhancements
 
