@@ -1,5 +1,8 @@
 import Note from "../models/Note.js";
 
+// Controller functions for CRUD operations on notes
+
+// Get all notes
 export async function getAllNotes(_, res) {
   try {
     const notes = await Note.find().sort({ createdAt: -1 }); // -1 will sort in desc. order (newest first)
@@ -10,6 +13,7 @@ export async function getAllNotes(_, res) {
   }
 }
 
+// Get a single note by ID
 export async function getNoteById(req, res) {
   try {
     const note = await Note.findById(req.params.id);
@@ -21,6 +25,7 @@ export async function getNoteById(req, res) {
   }
 }
 
+// Create a new note
 export async function createNote(req, res) {
   try {
     const { title, content } = req.body;
@@ -34,6 +39,7 @@ export async function createNote(req, res) {
   }
 }
 
+// Update an existing note
 export async function updateNote(req, res) {
   try {
     const { title, content } = req.body;
@@ -54,6 +60,7 @@ export async function updateNote(req, res) {
   }
 }
 
+// Delete a note
 export async function deleteNote(req, res) {
   try {
     const deletedNote = await Note.findByIdAndDelete(req.params.id);
