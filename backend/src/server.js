@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
 dotenv.config(); // Load environment variables from .env file
 
-const app = express();
+const app = express(); // Initialize Express app
 const PORT = process.env.PORT || 5001; // Use PORT from environment variables or default to 5001
 
 connectDB(); // Connect to the database
