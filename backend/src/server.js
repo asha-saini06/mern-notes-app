@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 5001; // Use PORT from environment variables or
 
 connectDB(); // Connect to the database
 
+app.use(express.json()); // Middleware to parse JSON request bodies
+
 app.use("/api/notes", notesRoutes); // Use the notes routes for any requests to /api/notes
 
 // Start the server and listen on port
